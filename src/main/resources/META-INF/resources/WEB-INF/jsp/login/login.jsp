@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chat</title>
+    <title>OA</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
@@ -293,15 +293,13 @@
              $("#ts").html("用户名错误");
              is_show(); */
             $.ajax({
-                url:"doLogin.do",
-                data:{"name":name,"password":password,"check":check},
-                type:"post",
+                url:"doLogin",
+                data:{name:name,password:123,check:check},
+                type:"get",
                 dataType:"json",
                 success:function(ret){
                     if(ret.msg=="success"){
                         location.href="welcome.do";
-
-
                     }else{
 
                         $("#ts").html(ret.msg);
