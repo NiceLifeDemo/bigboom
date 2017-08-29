@@ -294,14 +294,14 @@
              is_show(); */
             $.ajax({
                 url:"doLogin",
-                data:{name:name,password:123,check:check},
+                data:{name:name,password:password,check:check},
                 type:"get",
                 dataType:"json",
+                async:false,
                 success:function(ret){
                     if(ret.msg=="success"){
-                        location.href="welcome.do";
+                        location.href="welcome";
                     }else{
-
                         $("#ts").html(ret.msg);
                         is_show();
                     }

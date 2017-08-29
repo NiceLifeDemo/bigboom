@@ -23,7 +23,9 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 @SpringBootApplication(  scanBasePackages = {
 		"com.example.demo.controller",
-		"com.example.demo.service"
+		"com.example.demo.service",
+		"com.example.demo.config"
+
 })
 @EnableConfigurationProperties(value = {MyConfig.class})
 @EnableSwagger2
